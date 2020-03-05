@@ -4,7 +4,11 @@
   ${data.map(entry => `
   <li>
     ${entry.name_artist}: ${entry.name_album}
-    <a href="/${entry.id}">See Reviews</a>
+    <a href="albums/${entry.id}">See Reviews</a>
   </li>
   ` ).join('')}
 </ul>
+
+<a href="/users/signup">Signup to review an album</a>
+<br />
+<a href="/users/login">Login</a>
