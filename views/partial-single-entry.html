@@ -1,0 +1,34 @@
+${data.map(album => { return `
+<p>Artist: ${album.name_artist}</p>
+<p>Album: ${album.name_album}</p>
+` }).join('')}
+
+</br>
+<hr />
+<h2>Leave your review of this album:</h2>
+<form action="/" method="POST">
+  <input type="hidden" name="album_id" value="${data[0].id}" />
+  <label
+    >Title
+    <input type="text" name="reviews_title" placeholder="Review Title" />
+  </label>
+  <label
+    >My Review
+    <textarea
+      name="review_review"
+      placeholder="My review of this album..."
+    ></textarea>
+  </label>
+  <button type="submit">Save Review</button>
+</form>
+
+</br>
+<hr />
+${reviews.map(review => { return `
+<h3>Review Title: ${review.title}</h3>
+<p>Review: ${review.review}</p>
+<p>Stars: ${review.stars}</p>
+
+` }).join('')}
+
+<a href="/">Return to Homepage</a>
