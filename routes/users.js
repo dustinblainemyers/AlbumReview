@@ -5,7 +5,7 @@ var router = express.Router();
 router.get("/signup", async (req, res, next) => {
   res.render("template", {
     locals: {
-      title: "signup"
+      title: "Sign up"
     },
     partials: {
       partial: "partial-signup"
@@ -16,7 +16,7 @@ router.get("/signup", async (req, res, next) => {
 router.get("/login", async (req, res, next) => {
   res.render("template", {
     locals: {
-      title: "login"
+      title: "Login"
     },
     partials: {
       partial: "partial-login"
