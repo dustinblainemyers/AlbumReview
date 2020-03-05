@@ -1,17 +1,13 @@
-const pgp = require('pg-promise')({ 
-    query: function(e) {
-        console.log('QUERY', e.query);
-
-    }
+const pgp = require("pg-promise")({
+  query: function(e) {
+    console.log("QUERY", e.query);
+  }
 });
 
 const options = {
-
-    host: 'localhost',
-    database: 'albums',
-    user: 'macbook'
-
-}
+  host: "localhost",
+  database: "albums"
+};
 
 const db = pgp(options);
 

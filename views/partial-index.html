@@ -1,8 +1,10 @@
-<p> Album List </p>
+<p>Album List</p>
 
 <ul>
-    ${data.map(entry => 
-       ` <li>${entry.name_album} <a href="/${entry.id}">See Reviews</a>   </li>`
-    ).join('')}
-    
-    </ul>
+  ${data.map(entry => `
+  <li>
+    ${entry.name_artist}: ${entry.name_album}
+    <a href="/${entry.id}">See Reviews</a>
+  </li>
+  ` ).join('')}
+</ul>
