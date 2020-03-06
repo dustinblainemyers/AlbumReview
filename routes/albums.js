@@ -6,7 +6,7 @@ router.get("/:entry_id?", async (req, res, next) => {
   const entryId = req.params.entry_id;
   const data = await albumModel.getById(entryId);
   const reviews = await albumModel.getAllReviewsByID(entryId);
-  console.log("reviews", reviews);
+  console.log("reviews hello!", reviews);
 
   res.render("template", {
     locals: {

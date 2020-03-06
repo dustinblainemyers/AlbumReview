@@ -45,7 +45,7 @@ class AlbumModel {
     // get all the reviews for a given restaurant given a specific restaurant id .
     try {
       const response = await db.any(
-        `select albums.name_album , reviews.title , reviews.stars, reviews.review, users.name 
+        `select albums.name_album , reviews.title , reviews.stars, reviews.review, users.first_name 
                 from albums   inner join  reviews on albums.id = reviews.album_id 
                 inner join users on users.id = reviews.users_id WHERE reviews.album_id = ${albumID}`
       );
